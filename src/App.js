@@ -11,6 +11,7 @@ import Header from './Components/Header/Header';
 //import SimpleBottomNavigation from './Components/Navbar/BottomNav';
 import Signup from './Pages/Signup/Signup';
 import { Container } from 'react-bootstrap';
+import { AuthProvider } from './Components/contexts/AuthContext';
 
 
 // import BottomNav from './Components/Navbar/BottomNav';
@@ -18,9 +19,10 @@ import { Container } from 'react-bootstrap';
 
 export default function App ()  {
   return (
-  <Router>
+  <Router >
    <Header/>
   <div className='app'>
+      <AuthProvider>
     <Routes>
        <Route exact path="/" element={
          <Container className ="d-flex align-items-center justify-content-center"
@@ -36,6 +38,7 @@ export default function App ()  {
 
         <Route exact path="/search" element={<Search/>}/>
          </Routes>
+         </AuthProvider>
          </div>
   
   </Router>
