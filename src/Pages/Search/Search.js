@@ -19,6 +19,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Paging from '../../Components/Paging/Paging';
 import SingleContent from '../../Components/SingleContent/SingleContent';
+import SimpleBottomNavigation from '../../Components/Navbar/BottomNav';
+
+
 const Search = () => {
   // eslint-disable-next-line
   const [type, setType] = useState(0);
@@ -114,6 +117,7 @@ const Search = () => {
       {numOfPages > 1 && (
         <Paging setPage={setPage} numOfPages={numOfPages} />
       )}
+      <SimpleBottomNavigation/>
     </div>
   );
 };

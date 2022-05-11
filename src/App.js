@@ -8,7 +8,9 @@ import {BrowserRouter as Router, Route, Routes,} from 'react-router-dom';
  import Search from './Pages/Search/Search';
 
 import Header from './Components/Header/Header';
-import SimpleBottomNavigation from './Components/Navbar/BottomNav';
+//import SimpleBottomNavigation from './Components/Navbar/BottomNav';
+import Signup from './Pages/Signup/Signup';
+import { Container } from 'react-bootstrap';
 
 
 // import BottomNav from './Components/Navbar/BottomNav';
@@ -20,14 +22,22 @@ export default function App ()  {
    <Header/>
   <div className='app'>
     <Routes>
-       <Route exact path="/" element={<Home/>}/>
+       <Route exact path="/" element={
+         <Container className ="d-flex align-items-center justify-content-center"
+         style={{minHeight: "100vh"}}>
+           <div className='w-100' style={{maxWidth: "400px"}}>
+       <Signup/>
+       </div>
+       </Container>
+       }/>
+       <Route exact path="/home" element={<Home/>}/>
 
        <Route exact path="/list" element={<PlayList/>}/>
 
         <Route exact path="/search" element={<Search/>}/>
          </Routes>
          </div>
-  <SimpleBottomNavigation/> 
+  
   </Router>
   );
 }

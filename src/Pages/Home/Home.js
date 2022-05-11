@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Paging from '../../Components/Paging/Paging';
 import SingleContent from '../../Components/SingleContent/SingleContent';
 import "./home.css"
+import SimpleBottomNavigation from '../../Components/Navbar/BottomNav';
 
 
 
@@ -50,6 +51,7 @@ useEffect(() => {
         )}
     </div>
     <Paging setPage={setPage}/>
+    <SimpleBottomNavigation/>
     </div>
   )
 }
