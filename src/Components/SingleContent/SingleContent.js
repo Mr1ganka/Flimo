@@ -1,7 +1,7 @@
 import Badge from '@mui/material/Badge';
 import React from 'react'
 import { img_300, unavailable } from '../../config/config'
-import "./singlecontent.css"
+import "./SingleContent.css"
 
 const SingleContent = ({
     id,
