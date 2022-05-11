@@ -1,0 +1,12 @@
+*{
+  scroll-behavior: smooth;
+}
+.app {
+  /* text-align: center; */
+  min-height: 100vh;
+  color: white;
+  padding-top: 130px;
+  padding-bottom: 70px;
+  background-color:#73777B ;
+}
+
