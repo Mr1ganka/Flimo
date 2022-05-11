@@ -4,12 +4,13 @@ import { Form, Button, Card, Alert  } from 'react-bootstrap'
 import { useRef, useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
 import {useAuth} from '../../Components/contexts/AuthContext'
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
 const emailRef = useRef()
 const passwordRef = useRef()
 const passwordConfirmationRef = useRef()
-const { signup } = useAuth()
+const { login } = useAuth()
 const [error, setError] = useState('')
 const [loading, setLoading] = useState(false)
 
@@ -24,9 +25,9 @@ async function handleSubmit(e){
     try
     { setError('')
     setLoading(true)
-        await signup(emailRef.current.value,passwordRef.current.value)
+        await login(emailRef.current.value,passwordRef.current.value)
     }catch{
-        setError("Failed to create account")
+        setError("Failed to Sign in")
     }
     setLoading(false)
 }
@@ -62,7 +63,7 @@ async function handleSubmit(e){
 
                     <Button disabled={loading} className='w-100' type="submit">Sign Up</Button>
                     <div className='w-100 text-center mt-2'>
-            Already have an account? Log In
+            Already have an account? <Link to="/login">Login</Link>
         </div>
                 </Form>
             </Card.Body>
