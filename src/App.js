@@ -13,7 +13,7 @@ import Signup from './Pages/Signup/Signup';
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from './Components/contexts/AuthContext';
 import Login from './Pages/Login/Login';
-import PrivateRoute from './Components/PrivateRoutes/PrivateRoutes';
+// import PrivateRoute from './Components/PrivateRoutes/PrivateRoutes';
 
 
 // import BottomNav from './Components/Navbar/BottomNav';
